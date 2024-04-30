@@ -2,8 +2,6 @@
 
 ## This is a simple Todo app built with React and styled using Tailwind CSS.
 
-**Contributing**
-
 Contributions are welcome! If you would like to contribute to this project, please follow these steps:
 
 1. Fork the repository.
