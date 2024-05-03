@@ -4,13 +4,16 @@ import { faPenToSquare } from "@fortawesome/free-solid-svg-icons"
 import { faTrash } from "@fortawesome/free-solid-svg-icons"
 
 //props from todolist
-const TodoItem = ({task}) => {
+const TodoItem = ({task, deleteTodo, editTodo, toggleComplete}) => {
+
   return (
-    <div className="flex justify-between items-center bg-indigo-950 text-white p-2 m-4 rounded-md">
-      <p>{task.task}</p>
+    <div className="flex justify-between items-center bg-indigo-950 text-white p-2 m-4 rounded-md w-[490px]">
+
+      <p onClick={() => toggleComplete(task.id)} className={`${task.completed ? "completed" : "incompleted"}`}>{task.task}</p>
+
       <div>
-         <FontAwesomeIcon icon={faPenToSquare} />
-         <FontAwesomeIcon icon={faTrash} className="mr-5 ml-5" />
+         <FontAwesomeIcon icon={faPenToSquare} onClick={() => editTodo(task.id)} />
+         <FontAwesomeIcon icon={faTrash} onClick={() => deleteTodo(task.id)} className="mr-5 ml-5" />
 
       </div>
     </div>
