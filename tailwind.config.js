@@ -7,12 +7,20 @@ export default {
   theme: {
     extend: {},
   },
+
+  fontFamily: {
+    primary: "Montserrat",
+    secondary: "Roboto",
+  },
+
   plugins: [
     // eslint-disable-next-line no-undef
     require('daisyui'),
   ],
+
   daisyui: {
-    themes: ["retro"],
+    themes: ["retro", "nord", "dark", "light", "dim", "garden", "valentine", "synthwave"],
   },
+
 }
 
