@@ -42,13 +42,7 @@ const TodoList = () => {
     };
 
      //function to toggle the completed state of a todo
-     const toggleComplete = (id) => {
-      setTodos(
-        todos.map((todo) =>
-          todo.id === id ? { ...todo, completed: !todo.completed } : todo
-        )
-      );
-    }
+     
   
 
    // function to edit a todo 
@@ -78,8 +72,7 @@ const TodoList = () => {
           key={todo.id} 
           task={todo} 
           deleteTodo={deleteTodo} 
-          editTodo={editTodo} 
-          toggleComplete={toggleComplete} 
+          editTodo={editTodo}  
           />
           )} 
       </div>
