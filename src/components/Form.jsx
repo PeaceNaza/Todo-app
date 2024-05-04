@@ -12,6 +12,7 @@ const Form = ({addTodo}) => {
      if (value) {
       //call the function addTodo from todolist component and pass the value as an argument
       addTodo(value); //add todo
+
       //clear the input field after submitting
       setValue("");
      }
@@ -20,10 +21,10 @@ const Form = ({addTodo}) => {
 
 
   return (
-     <form className="p-5" onSubmit={handleSubmit}>
+     <form className="p-5 text-xs" onSubmit={handleSubmit}>
 
-        <input type="text" placeholder="What tasks do you need to accomplish today?" className="placeholder:text-indigo-950 p-2 w-[400px] rounded-md outline-none" value={value} onChange={(e) => setValue(e.target.value)} />
-        
+        <input type="text" placeholder="What tasks do you need to accomplish today?" className="placeholder:text-indigo-950 placeholder:text-xs p-2 w-[300px] rounded-md outline-none" value={value} onChange={(e) => setValue(e.target.value)} />
+
         <button type="submit" className="ml-2 p-2 text-white bg-indigo-950 rounded-md">Add Task</button>
 
      </form>
