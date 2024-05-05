@@ -4,7 +4,7 @@ import TodoList from './components/TodoList'
 function App() {
   return (
     <>
-    <div className="flex  justify-center">
+    <div className="container sm:mx-auto flex justify-center">
       <TodoList />
     </div>
       
