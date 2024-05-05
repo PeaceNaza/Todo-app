@@ -56,7 +56,7 @@ const TodoList = () => {
     }
 
   return (
-    <div data-theme="valentine" className="mt-20 lg:w-[40%] rounded-md pb-7">
+    <div data-theme="valentine" className="mt-20 lg:w-[40%] sm:w-[100%] rounded-md pb-7">
 
       <h1 className="text-center font-bold lg:text-2xl sm:text-md mt-3 text-indigo-950 ">Todo Task Manager</h1>
 
