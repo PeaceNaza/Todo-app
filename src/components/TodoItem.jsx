@@ -7,7 +7,7 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons"
 const TodoItem = ({task, deleteTodo, editTodo}) => {
 
   return (
-    <div className="flex justify-between items-center bg-indigo-950 text-xs text-white p-2 m-4 rounded-md lg:w-[374px] text-wrap">
+    <div className="flex justify-between items-center bg-indigo-950 text-xs text-white p-2 m-4 rounded-md text-wrap">
       <div>
         <input type="checkbox"/>
           <label className="ml-2">{task.task}</label>

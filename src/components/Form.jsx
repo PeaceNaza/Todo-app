@@ -21,9 +21,9 @@ const Form = ({addTodo}) => {
 
 
   return (
-     <form className="container p-5 text-xs" onSubmit={handleSubmit}>
+     <form className="p-5 text-xs" onSubmit={handleSubmit}>
 
-        <input type="text" placeholder="What tasks do you need to accomplish today?" className="placeholder:text-indigo-950 placeholder:text-xs p-2 lg:w-[300px] min-w-[300px] rounded-md outline-none" value={value} onChange={(e) => setValue(e.target.value)} />
+        <input type="text" placeholder="What tasks do you need to accomplish today?" className="placeholder:text-indigo-950 placeholder:text-xs p-2 min-w-[300px]  rounded-md outline-none" value={value} onChange={(e) => setValue(e.target.value)} />
 
         <button type="submit" className="ml-2 p-2 text-white bg-indigo-950 rounded-md">Add Task</button>
 
