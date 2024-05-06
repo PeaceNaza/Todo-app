@@ -8,7 +8,7 @@ const TodoItem = ({task, deleteTodo, editTodo}) => {
 
   return (
     <div className="container flex justify-between items-center bg-indigo-950 text-xs text-white p-2 rounded-md text-wrap mt-5 ml-4 w-[425px] h-10">
-      <div>
+      <div className="">
         <input type="checkbox"/>
           <label className="ml-2">{task.task}</label>
       </div>

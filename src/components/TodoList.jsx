@@ -57,12 +57,12 @@ const TodoList = () => {
 
   return ( 
     //todolist container
-    <div data-theme="valentine" className="container mt-20 rounded-md pb-7 w-[500px]">
+    <div data-theme="valentine" className=" mt-20 rounded-md pb-7 w-[500px]">
 
       <h1 className="text-center font-bold lg:text-2xl sm:text-md mt-3 text-indigo-950 ">Todo Task Manager</h1>
 
       {/** passing props from todolist to form component */}
-      <div className="grid items-center justify-center">
+      <div className="ml-6 ">
           <Form addTodo={addTodo} />
           {/**generate a todo for each value in the state and display on form by maping through */} 
           
