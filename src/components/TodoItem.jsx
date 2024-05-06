@@ -4,10 +4,11 @@ import { faPenToSquare } from "@fortawesome/free-solid-svg-icons"
 import { faTrash } from "@fortawesome/free-solid-svg-icons"
 
 //props from todolist
-const TodoItem = ({task, deleteTodo, editTodo}) => {
+const TodoItem = ({task, deleteTodo, editTodo, toggleComplete}) => {
 
   return (
-    <div className="container flex justify-between items-center bg-indigo-950 text-xs text-white p-2 rounded-md text-wrap mt-5 ml-4 w-[425px] h-10">
+    <div className="container flex justify-between items-center bg-indigo-950 text-xs text-white p-2 rounded-md mt-5 lg:ml-4 lg:w-[425px] sm:w-[270px] h-8">
+
       <div className="">
         <input type="checkbox"/>
           <label className="ml-2">{task.task}</label>

@@ -22,11 +22,11 @@ const Form = ({addTodo}) => {
 
   return (
    <div>
-     <form className="ml-5 mb-2 text-xs" onSubmit={handleSubmit}>
+     <form className="lg:ml-5 mb-2 text-xs" onSubmit={handleSubmit}>
         
-        <input type="text" placeholder="What tasks do you need to accomplish today?" className="placeholder:text-indigo-950 placeholder:text-xs p-2 w-[350px] h-10 rounded-md outline-none mt-7 shadow" value={value} onChange={(e) => setValue(e.target.value)} />
+        <input type="text" placeholder="Add a task you want to accomplish" className="placeholder:text-indigo-950 lg:placeholder:text-sm p-2 lg:w-[350px] sm:w-[200px] h-8 rounded-md outline-none mt-6 shadow" value={value} onChange={(e) => setValue(e.target.value)} />
 
-<button type="submit" className="ml-2 p-2 text-white bg-indigo-950 rounded-md">Add Task</button>
+<button type="submit" className="ml-2 p-2 text-white bg-indigo-950 rounded-md sm:text-wrap shadow">Add Task</button>
         
         
 

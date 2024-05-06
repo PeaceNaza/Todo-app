@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Form  from "./Form"
 import TodoItem from "./TodoItem"
 import Edit from "./Edit"
@@ -7,7 +7,8 @@ uuidv4();
 
 const TodoList = () => {
 
-  const [todos, setTodos] = useState([
+  const [todos, setTodos] = useState(localStorage.getItem("todos") ? JSON.parse(localStorage.getItem("todos")) :
+    [
     {
       id: uuidv4(),
       task: "Learn React",
@@ -16,7 +17,7 @@ const TodoList = () => {
     },
     {
       id: uuidv4(),
-      task: "Learn Node",
+      task: "Go shopping",
       completed: false,
       isEditing: false
     },
@@ -29,6 +30,11 @@ const TodoList = () => {
 
   ])
      
+  //save todos to local storage 
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos))
+  }, [todos]) // Include 'todos' in the dependency array of the useEffect hook.
+  
   //function to add a todo
     const addTodo = (todo) => {
       setTodos([...todos, {id: uuidv4(), task: todo, completed: false, isEditing: false },])
@@ -42,6 +48,8 @@ const TodoList = () => {
     };
 
      //function to toggle the completed state of a todo
+    const toggleComplete = (id) => {
+      setTodos(todos.map(todo => todo.id === id ? {...todo, completed: !todo.completed} : todo))
      
   
 
@@ -57,7 +65,7 @@ const TodoList = () => {
 
   return ( 
     //todolist container
-    <div data-theme="valentine" className=" mt-20 rounded-md pb-7 w-[500px]">
+    <div data-theme="valentine" className="whitespace-pre-wrap mt-20 rounded-md pb-7 lg:w-[500px] sm:w-[315px]">
 
       <h1 className="text-center font-bold lg:text-2xl sm:text-md mt-3 text-indigo-950 ">Todo Task Manager</h1>
 
@@ -73,7 +81,8 @@ const TodoList = () => {
           key={todo.id} 
           task={todo} 
           deleteTodo={deleteTodo} 
-          editTodo={editTodo}  
+          editTodo={editTodo}
+          toggleComplete={toggleComplete}  
           />
           )} 
       </div>
