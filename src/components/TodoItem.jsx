@@ -4,7 +4,9 @@ import { faPenToSquare } from "@fortawesome/free-solid-svg-icons"
 import { faTrash } from "@fortawesome/free-solid-svg-icons"
 
 //props from todolist
-const TodoItem = ({task, deleteTodo, editTodo, toggleComplete}) => {
+const TodoItem = ({task, deleteTodo, editTodo}) => {
+  //function to toggle the completed state of a todo
+ 
 
   return (
     <div className="container flex justify-between items-center bg-indigo-950 text-xs text-white p-2 rounded-md mt-5 lg:ml-4 lg:w-[425px] sm:w-[270px] h-8">

@@ -46,13 +46,7 @@ const TodoList = () => {
         setTodos(todos.filter(todo => todo.id !== id));
       }
     };
-
-     //function to toggle the completed state of a todo
-    const toggleComplete = (id) => {
-      setTodos(todos.map(todo => todo.id === id ? {...todo, completed: !todo.completed} : todo))
      
-  
-
    // function to edit a todo 
     const editTodo = (id) => {
       setTodos(todos.map(todo => todo.id === id ? {...todo, isEditing: !todo.isEditing} : todo))
@@ -82,7 +76,6 @@ const TodoList = () => {
           task={todo} 
           deleteTodo={deleteTodo} 
           editTodo={editTodo}
-          toggleComplete={toggleComplete}  
           />
           )} 
       </div>
