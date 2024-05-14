@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react'
+import "../Styles/todo.css"
 
 //props coming from todolist
 const Form = ({addTodo}) => { 
@@ -21,17 +22,19 @@ const Form = ({addTodo}) => {
 
 
   return (
-   <div>
+   
      <form className="lg:ml-5 mb-2 text-xs" onSubmit={handleSubmit}>
-        
-        <input type="text" placeholder="Add a task you want to accomplish" className="placeholder:text-indigo-950 lg:placeholder:text-sm p-2 lg:w-[350px] sm:w-[200px] h-8 rounded-md outline-none mt-6 shadow" value={value} onChange={(e) => setValue(e.target.value)} />
+        <div className="container">
+            <input type="text" placeholder="Add a task you want to accomplish" className="placeholder:text-indigo-950 lg:placeholder:text-sm p-2 lg:w-[350px] sm:w-[200px] h-8 rounded-md outline-none mt-6 shadow" value={value} onChange={(e) => setValue(e.target.value)} />
 
-<button type="submit" className="ml-2 p-2 text-white bg-indigo-950 rounded-md sm:text-wrap shadow">Add Task</button>
+          <button type="submit" className="ml-2 p-2 text-white bg-indigo-950 rounded-md sm:text-wrap shadow">Add Task</button>
+        </div>
+        
         
         
 
      </form>
-     </div>
+    
   )
 }
 

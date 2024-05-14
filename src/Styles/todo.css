@@ -1,0 +1,49 @@
+@media screen and (max-width: 620px) {
+  /* Adjustments for screens 480px and below */
+
+  /* Center align form elements */
+  form {
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+    width: 100%; 
+    
+  }
+
+  /* Adjust input width */
+  input {
+    width: 100%; 
+    max-width: 350px; 
+  
+  }
+
+  /* Adjust button styles */
+  button {
+    margin-top: 1.5rem !important; 
+    margin-right: 2px !important;
+    width: 40%;
+    max-width: 70px; 
+
+  }
+
+  /* Center align the TodoList container */
+  .whitespace-pre-wrap {
+    width: 93%;
+    max-width: 350px;
+    padding-right: 10px;
+  }
+
+  /* Adjust font size of the header */
+  .text-center {
+    font-size: 1.2rem; /* Adjust as needed */
+  } 
+
+  form .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    
+  }
+
+}
