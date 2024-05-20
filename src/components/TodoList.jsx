@@ -24,7 +24,7 @@ const TodoList = () => {
     },
     {
       id: uuidv4(),
-      task: "Learn Express",
+      task: "Learn Zustand",
       completed: false,
       isEditing: false
     }
